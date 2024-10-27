@@ -1,0 +1,73 @@
+.animal {
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 200px;
+
+  &__content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    font-family: "Fredoka";
+    color: #000;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  img {
+    max-width: 112px;
+    max-height: 112px;
+    transition: transform 0.1s ease;
+  }
+
+  &.active {
+    background-color: #b2ff59 !important;
+
+    img {
+      animation: vibrate 0.1s linear infinite;
+    }
+  }
+
+  &:hover &__content {
+    scale: (1.2);
+  }
+
+  &:active &__content {
+    scale: (0.8);
+  }
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.vibrating {
+  animation: vibrate 0.1s linear infinite;
+}
