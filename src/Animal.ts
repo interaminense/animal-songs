@@ -25,8 +25,8 @@ export class Animal {
     return {
       id: this.id,
       name: this.name,
-      imagePath: `/assets/images/${this.id}.png`,
-      songPath: `/assets/songs/${this.id}.mp3`,
+      imagePath: `/animal-songs/assets/images/${this.id}.png`,
+      songPath: `/animal-songs/assets/songs/${this.id}.mp3`,
     };
   }
 }
